@@ -1,0 +1,20 @@
+void swap(int* a, int* b);
+int main()
+{
+	int a = 123;
+	int result;
+	result = even(a);
+	int a = 10;
+	int b = 20;
+	swap(&a, &b);
+	printf("a=%d b=%d\n", result);
+
+}
+
+void swap(int* a, int* b)
+{
+	int help;
+	help = *a;
+	*a = *b;
+	*b = help;
+	
