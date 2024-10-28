@@ -28,3 +28,23 @@ void swap(int& a, int& b)
 	b = help;
 
 }
+// задание №3
+#include <stdio.h>
+
+void print_bits(unsigned short num) {
+    for (int i = sizeof(unsigned short) * 8 - 1; i >= 0; --i) {
+        printf("%d", ((num >> i) & 1));  // Сдвигаем в право и берем младший бит
+    }
+    printf(" ");
+}
+
+int main() {
+
+    unsigned short number;
+
+    scanf_s("%hu", &number);
+
+    print_bits(number);
+
+    return 0;
+}
